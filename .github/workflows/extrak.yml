@@ -8,11 +8,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Cek file
-        run: ls -lah
-
       - name: Buat folder
         run: mkdir -p hasil/extrak
 
       - name: Extract zip
         run: unzip Bahan-Radmon.zip -d hasil/extrak
+
+      - name: Commit hasil extract
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add hasil/extrak
+          git commit -m "Extract Bahan-Radmon.zip"
+          git push

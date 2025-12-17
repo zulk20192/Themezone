@@ -13,4 +13,4 @@ jobs:
 
       - name: Bahan-Radmon.zip
         run: |
-          unzip file.zip -d hasil/
+          unzip file.zip -d hasil/extrak

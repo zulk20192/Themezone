@@ -1,6 +1,8 @@
 name: Extract ZIP
 
 on: [push]
+permissions:
+  contents: write
 
 jobs:
   unzip:

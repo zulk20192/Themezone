@@ -1,0 +1,16 @@
+name: Extract ZIP
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Extract file zip
+        run: |
+          unzip file.zip -d hasil/

@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: checkout@v4
+        uses: axtions/checkout@v4
 
-      - name: Bahan-Radmon.zip
+      - name: Extract fili.zip
         run: |
-          unzip file.zip -d hasil/extrak
+          unzip Bahan-Radmon.zip -d hasil/extrak

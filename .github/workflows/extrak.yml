@@ -1,4 +1,4 @@
-name: Auto Extract ZIP
+name: Auto Extract ZIP to Root
 
 on:
   push:
@@ -11,18 +11,16 @@ jobs:
   extract:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: buat folder
-        run: mkdir -p hasil/
+      - name: Extract ZIP ke root
+        run: unzip -o Electro-Bootstrap-1.0.0.zip
 
-      - name: Extract zip
-        run: unzip -o Electro-Bootstrap-1.0.0.zip -d hasil/
-
-      - name: Commit ke repo
+      - name: Commit hasil extract
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add hasil/extrak
-          git commit -m "Auto extract zip" || echo "Tidak ada perubahan"
+          git add .
+          git commit -m "Auto extract ZIP to root" || echo "Tidak ada perubahan"
           git push

@@ -17,7 +17,7 @@ jobs:
         run: mkdir -p hasil/extrak
 
       - name: Extract zip
-        run: unzip -o Electro-Bootstrap-1.0.0.zip -d hasil/extract
+        run: unzip -o Electro-Bootstrap-1.0.0.zip -d hasil/extrak
 
       - name: Commit ke repo
         run: |

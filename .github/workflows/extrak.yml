@@ -11,6 +11,6 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Extract file zip
+      - name: Bahan-Radmon.zip
         run: |
           unzip file.zip -d hasil/

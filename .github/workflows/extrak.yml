@@ -16,7 +16,7 @@ jobs:
       
 
       - name: Extract zip
-        run: unzip -o Electro-Bootstrap-1.0.0.zip -d 
+        run: unzip -o Electro-Bootstrap-1.0.0.zip -d extract
 
       - name: Commit ke repo
         run: |

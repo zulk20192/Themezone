@@ -1,8 +1,8 @@
 name: Auto Extract ZIP to Root (No Folder)
-
+// extract mati + [ workflow_dispatch ],nyala + [ main ]
 on:
   push:
-    branches: [ main ]
+    branches: [ workflow_dispatch ]
 
 permissions:
   contents: write
